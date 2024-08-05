@@ -1,11 +1,11 @@
-package main
+package utils
 
 import (
 	"fmt"
 	"os"
 )
 
-func viewTodoList(filename string) {
+func ViewTodoList(filename string) {
 	content, err := os.ReadFile(filename)
 	if err != nil {
 		fmt.Println("Error reading To-Do List:", err)

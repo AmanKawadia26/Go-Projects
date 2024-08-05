@@ -1,6 +1,9 @@
-package main
+package ui
 
 import (
+	"LoginPage/internal/auth"
+	"LoginPage/internal/config"
+	"LoginPage/internal/models"
 	"bufio"
 	"fmt"
 	"os"
@@ -8,10 +11,10 @@ import (
 )
 
 func Login() {
-	var user Users
-	user.username, user.password = CredInput()
-	for _, pass := range users {
-		if pass.username == user.username && pass.password == user.password {
+	var user models.Users
+	user.Username, user.Password = auth.CredInput()
+	for _, pass := range config.Users {
+		if pass.Username == user.Username && pass.Password == user.Password {
 			fmt.Println("You are logged in.")
 			reader := bufio.NewReader(os.Stdin)
 			for {
@@ -24,7 +27,7 @@ func Login() {
 
 				switch choice {
 				case "1":
-					TodoList(user.username)
+					TodoList(user.Username)
 				case "2":
 					return
 				default:

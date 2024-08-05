@@ -1,4 +1,4 @@
-package main
+package utils
 
 import (
 	"bufio"
@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func addTask(filename string) {
+func AddTask(filename string) {
 	file, err := os.OpenFile(filename, os.O_APPEND|os.O_WRONLY|os.O_CREATE, 0644)
 	if err != nil {
 		fmt.Println("Error opening file:", err)
@@ -24,7 +24,6 @@ func addTask(filename string) {
 		return
 	}
 
-	// Remove the trailing newline and any other whitespace
 	task = strings.TrimSpace(task)
 
 	if task == "" {

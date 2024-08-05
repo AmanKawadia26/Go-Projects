@@ -1,18 +1,16 @@
 package main
 
 import (
+	"LoginPage/internal/auth"
+	"LoginPage/internal/config"
+	"LoginPage/internal/models"
+	"LoginPage/internal/ui"
+	"LoginPage/internal/utils"
 	"bufio"
 	"fmt"
 	"os"
 	"strings"
 )
-
-type Users struct {
-	username string
-	password string
-}
-
-var users []Users
 
 func main() {
 
@@ -24,23 +22,24 @@ func main() {
 	defer f.Close()
 	scanner := bufio.NewScanner(f)
 	//fmt.Println(scanner)
+
 	for scanner.Scan() {
 		line := scanner.Text()
 		//fmt.Println(line)
 		parts := strings.Split(line, ":")
 		//fmt.Println(parts)
 		if len(parts) == 2 {
-			user := Users{
-				username: parts[0],
-				password: parts[1],
+			user := models.Users{
+				Username: parts[0],
+				Password: parts[1],
 			}
-			users = append(users, user)
+			config.Users = append(config.Users, user)
 		}
 	}
 	//fmt.Println(users)
 
 	for {
-		if !Verification() {
+		if !auth.Verification() {
 			fmt.Println("Verification Failed! Can't Login or SignUp.")
 			return
 		}
@@ -53,9 +52,9 @@ func main() {
 
 		switch choice {
 		case 1:
-			Login()
+			ui.Login()
 		case 2:
-			SignUp(f)
+			utils.SignUp(f)
 		default:
 			fmt.Println("Invalid option")
 			return

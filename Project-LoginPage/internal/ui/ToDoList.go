@@ -1,6 +1,7 @@
-package main
+package ui
 
 import (
+	"LoginPage/internal/utils"
 	"bufio"
 	"fmt"
 	"os"
@@ -25,16 +26,21 @@ func TodoList(username string) {
 
 		switch choice {
 		case "1":
-			viewTodoList(todoFile)
+			utils.ViewTodoList(todoFile)
 		case "2":
-			addTask(todoFile)
+
+			utils.AddTask(todoFile)
 		case "3":
-			viewDailyStatus(statusFile)
+
+			utils.ViewDailyStatus(statusFile)
 		case "4":
-			markTaskAsCompleted(todoFile, statusFile)
+
+			utils.MarkTaskAsCompleted(todoFile, statusFile)
 		case "5":
+
 			return
 		default:
+
 			fmt.Println("Invalid choice. Please try again.")
 		}
 	}

@@ -1,4 +1,4 @@
-package main
+package utils
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func markTaskAsCompleted(todoFile, statusFile string) {
+func MarkTaskAsCompleted(todoFile, statusFile string) {
 
 	todoContent, err := os.ReadFile(todoFile)
 	if err != nil {
@@ -39,7 +39,7 @@ func markTaskAsCompleted(todoFile, statusFile string) {
 			fmt.Println("Error updating To-Do List:", err)
 			return
 		}
-		
+
 		statusFile, err := os.OpenFile(statusFile, os.O_APPEND|os.O_WRONLY|os.O_CREATE, 0644)
 		if err != nil {
 			fmt.Println("Error opening Daily Status file:", err)

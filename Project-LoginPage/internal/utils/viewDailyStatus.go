@@ -1,11 +1,11 @@
-package main
+package utils
 
 import (
 	"fmt"
 	"os"
 )
 
-func viewDailyStatus(filename string) {
+func ViewDailyStatus(filename string) {
 	content, err := os.ReadFile(filename)
 	if err != nil {
 		fmt.Println("Error reading Daily Status:", err)

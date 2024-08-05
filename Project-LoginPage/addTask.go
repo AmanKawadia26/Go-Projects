@@ -18,7 +18,6 @@ func addTask(filename string) {
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Print("Enter task: ")
 
-	// Read the entire line, including any spaces
 	task, err := reader.ReadString('\n')
 	if err != nil {
 		fmt.Println("Error reading input:", err)
@@ -33,7 +32,6 @@ func addTask(filename string) {
 		return
 	}
 
-	// Write the task to the file
 	_, err = file.WriteString(task + "\n")
 	if err != nil {
 		fmt.Println("Error writing to file:", err)

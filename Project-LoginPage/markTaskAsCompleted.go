@@ -7,7 +7,7 @@ import (
 )
 
 func markTaskAsCompleted(todoFile, statusFile string) {
-	// Read To-Do List
+
 	todoContent, err := os.ReadFile(todoFile)
 	if err != nil {
 		fmt.Println("Error reading To-Do List:", err)
@@ -17,7 +17,6 @@ func markTaskAsCompleted(todoFile, statusFile string) {
 	tasks := strings.Split(string(todoContent), "\n")
 	var completedTask string
 
-	// Display tasks and get user input
 	fmt.Println("\nSelect a task to mark as completed:")
 	for i, task := range tasks {
 		if task != "" {
@@ -31,7 +30,7 @@ func markTaskAsCompleted(todoFile, statusFile string) {
 
 	if taskNum > 0 && taskNum <= len(tasks) {
 		completedTask = tasks[taskNum-1]
-		// Remove task from To-Do List
+
 		tasks = append(tasks[:taskNum-1], tasks[taskNum:]...)
 
 		// Write updated To-Do List
@@ -40,8 +39,7 @@ func markTaskAsCompleted(todoFile, statusFile string) {
 			fmt.Println("Error updating To-Do List:", err)
 			return
 		}
-
-		// Append completed task to Daily Status
+		
 		statusFile, err := os.OpenFile(statusFile, os.O_APPEND|os.O_WRONLY|os.O_CREATE, 0644)
 		if err != nil {
 			fmt.Println("Error opening Daily Status file:", err)

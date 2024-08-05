@@ -12,10 +12,10 @@ func Login() {
 	user.username, user.password = CredInput()
 	for _, pass := range users {
 		if pass.username == user.username && pass.password == user.password {
-			fmt.Println("You are logged in")
+			fmt.Println("You are logged in.")
 			reader := bufio.NewReader(os.Stdin)
 			for {
-				fmt.Println("1. Check To-Do List and Daily Status")
+				fmt.Println("\n1. Check To-Do List and Daily Status")
 				fmt.Println("2. Go back to main menu")
 				fmt.Print("Enter your choice: ")
 

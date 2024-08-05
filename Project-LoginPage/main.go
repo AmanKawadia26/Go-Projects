@@ -28,7 +28,7 @@ func main() {
 		line := scanner.Text()
 		//fmt.Println(line)
 		parts := strings.Split(line, ":")
-		fmt.Println(parts)
+		//fmt.Println(parts)
 		if len(parts) == 2 {
 			user := Users{
 				username: parts[0],
@@ -44,7 +44,7 @@ func main() {
 			fmt.Println("Verification Failed! Can't Login or SignUp.")
 			return
 		}
-		fmt.Println("Select an option: ")
+		fmt.Println("\nSelect an option: ")
 		fmt.Println("1. Login")
 		fmt.Println("2. Signup")
 

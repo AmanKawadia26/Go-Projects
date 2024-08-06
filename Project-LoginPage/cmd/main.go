@@ -5,7 +5,6 @@ import (
 	"LoginPage/internal/config"
 	"LoginPage/internal/models"
 	"LoginPage/internal/ui"
-	"LoginPage/internal/utils"
 	"bufio"
 	"fmt"
 	"os"
@@ -54,7 +53,7 @@ func main() {
 		case 1:
 			ui.Login()
 		case 2:
-			utils.SignUp(f)
+			ui.SignUp(f)
 		default:
 			fmt.Println("Invalid option")
 			return

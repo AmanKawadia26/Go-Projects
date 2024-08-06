@@ -5,22 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0892d45d-ee85-433d-a5f4-b26a7e1d20b0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/CredInput.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/auth/CredInput.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/Login.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/ui/Login.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/SignUp.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/utils/SignUp.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/ToDoList.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/ui/ToDoList.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/Verification.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/auth/Verification.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/addTask.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/utils/addTask.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/aman_status.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/aman_status.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project-LoginPage/aman_todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/aman_todo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/auth/passwordValidator.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/auth/passwordValidator.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/cmd/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/markTaskAsCompleted.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/utils/markTaskAsCompleted.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/cmd/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/auth/Verification.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/auth/Verification.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/ui/Login.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/ui/Login.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/ui/ToDoList.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/ui/ToDoList.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/utils/SignUp.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/ui/SignUp.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/utils/addTask.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/utils/ToDoList/addTask.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/utils/markTaskAsCompleted.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/utils/DailyStatus/markTaskAsCompleted.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/utils/viewDailyStatus.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/utils/DailyStatus/viewDailyStatus.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/utils/viewTodoList.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/utils/ToDoList/viewTodoList.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project-LoginPage/user.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/user.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/viewDailyStatus.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/utils/viewDailyStatus.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/viewTodoList.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/utils/viewTodoList.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user.txt" beforeDir="false" afterPath="$PROJECT_DIR$/user.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,11 +68,11 @@
       <recent name="C:\Users\akawadia\Downloads\Go-Projects\Project-LoginPage\internal" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\akawadia\Downloads\Go-Projects\Project-LoginPage" />
+      <recent name="C:\Users\akawadia\Downloads\Go-Projects\Project-LoginPage\internal\utils\DailyStatus" />
+      <recent name="C:\Users\akawadia\Downloads\Go-Projects\Project-LoginPage\internal\utils\ToDoList" />
       <recent name="C:\Users\akawadia\Downloads\Go-Projects\Project-LoginPage\internal\ui" />
+      <recent name="C:\Users\akawadia\Downloads\Go-Projects\Project-LoginPage" />
       <recent name="C:\Users\akawadia\Downloads\Go-Projects\Project-LoginPage\internal\auth" />
-      <recent name="C:\Users\akawadia\Downloads\Go-Projects\Project-LoginPage\internal\utils" />
-      <recent name="C:\Users\akawadia\Downloads\Go-Projects\Project-LoginPage\cmd" />
     </key>
   </component>
   <component name="RunManager" selected="Go Build.go build LoginPage/cmd">

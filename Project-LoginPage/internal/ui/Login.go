@@ -13,6 +13,9 @@ import (
 func Login() {
 	var user models.Users
 	user.Username, user.Password = auth.CredInput()
+
+	user.Password = hashPassword(user.Password)
+
 	for _, pass := range config.Users {
 		if pass.Username == user.Username && pass.Password == user.Password {
 			fmt.Println("You are logged in.")

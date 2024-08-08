@@ -1,68 +1,58 @@
 package CourseProgress
 
 import (
+	"LoginPage/internal/models"
 	"fmt"
 	"os"
 	"strings"
 )
 
-type Progress struct {
-	TotalTasks           int
-	CompletedTasks       int
-	RemainingTasks       int
-	CompletionPercentage float64
-}
-
-func CalculateProgress(todoFile, statusFile string) (Progress, error) {
-	todoContent, err := os.ReadFile(todoFile)
+func CalculateProgress(username, courseFile string) (models.Progress, error) {
+	courseContent, err := os.ReadFile(courseFile)
 	if err != nil {
-		//fmt.Println(err)
-		return Progress{}, fmt.Errorf("error reading To-Do List: %w", err)
+		return models.Progress{}, fmt.Errorf("error reading course file: %w", err)
 	}
 
-	statusContent, err := os.ReadFile(statusFile)
+	completedFile := username + "_completed_modules.txt"
+	completedContent, err := os.ReadFile(completedFile)
 	if err != nil {
-		return Progress{}, fmt.Errorf("error reading Daily Status: %w", err)
+		return models.Progress{}, fmt.Errorf("error reading completed modules file: %w", err)
 	}
 
-	tasks := strings.Split(string(todoContent), "\n")
-	completedTasks := strings.Split(string(statusContent), "\n")
+	modules := strings.Split(string(courseContent), "\n")
+	completedModules := strings.Split(string(completedContent), "\n")
 
-	totalTasks := len(tasks)
-	remainingTasks := totalTasks
+	totalModules := len(modules)
 	completedCount := 0
-
-	for _, task := range completedTasks {
-		if strings.HasPrefix(task, "Completed: ") {
+	for _, module := range completedModules {
+		if module != "" {
 			completedCount++
-			remainingTasks--
 		}
 	}
 
 	completionPercentage := 0.0
-	if totalTasks > 0 {
-		completionPercentage = (float64(completedCount) / float64(totalTasks)) * 100
+	if totalModules > 0 {
+		completionPercentage = (float64(completedCount) / float64(totalModules)) * 100
 	}
 
-	return Progress{
-		TotalTasks:           totalTasks,
+	return models.Progress{
+		TotalTasks:           totalModules,
 		CompletedTasks:       completedCount,
-		RemainingTasks:       remainingTasks,
+		RemainingTasks:       totalModules - completedCount,
 		CompletionPercentage: completionPercentage,
 	}, nil
 }
 
-// DisplayProgress prints the progress in a human-readable format
-func DisplayProgress(todoFile, statusFile string) {
-	progress, err := CalculateProgress(todoFile, statusFile)
+func DisplayProgress(username, courseFile string) {
+	progress, err := CalculateProgress(username, courseFile)
 	if err != nil {
-		fmt.Println("Error calculating progress:", err)
+		fmt.Println("Error calculating progress because there is no task history.")
 		return
 	}
 
-	fmt.Printf("\nCourse Progress:\n")
-	fmt.Printf("Total Tasks: %d\n", progress.TotalTasks)
-	fmt.Printf("Completed Tasks: %d\n", progress.CompletedTasks)
-	fmt.Printf("Remaining Tasks: %d\n", progress.RemainingTasks)
+	fmt.Printf("\nCourse Progress for %s:\n", username)
+	fmt.Printf("Total Modules: %d\n", progress.TotalTasks)
+	fmt.Printf("Completed Modules: %d\n", progress.CompletedTasks)
+	fmt.Printf("Remaining Modules: %d\n", progress.RemainingTasks)
 	fmt.Printf("Completion Percentage: %.2f%%\n", progress.CompletionPercentage)
 }

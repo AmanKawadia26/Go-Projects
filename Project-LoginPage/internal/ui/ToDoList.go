@@ -8,7 +8,6 @@ import (
 	"fmt"
 	"os"
 	"strings"
-	"sync"
 )
 
 func TodoList(username string) {
@@ -17,78 +16,83 @@ func TodoList(username string) {
 	reader := bufio.NewReader(os.Stdin)
 
 	for {
-		fmt.Println("\n1. To-Do List")
-		fmt.Println("2. Daily Status")
-		fmt.Println("3. View Course Progress")
-		fmt.Println("4. Go Back")
+		fmt.Println(yellow + "\n📋 Task Management Menu:" + reset)
+		fmt.Println(cyan + "1. 📝 Manage To-Do List" + reset)
+		fmt.Println(cyan + "2. 📊 View Daily Status" + reset)
+		fmt.Println(cyan + "3. 📈 View Daily Status Progress" + reset)
+		fmt.Println(cyan + "4. 🔙 Go Back to Main Menu" + reset)
 
+		fmt.Print(yellow + "\nPlease enter your choice (1-4): " + reset)
 		choice1, _ := reader.ReadString('\n')
 		choice1 = strings.TrimSpace(choice1)
 
 		switch choice1 {
 		case "1":
-			fmt.Println("\n1. View To-Do List")
-			fmt.Println("2. Add Task to To-Do List")
-			fmt.Println("3. Go back")
-			fmt.Print("Enter your choice: ")
-
-			choice2, _ := reader.ReadString('\n')
-			choice2 = strings.TrimSpace(choice2)
-
-			var wg sync.WaitGroup
-
-			switch choice2 {
-			case "1":
-				wg.Add(1)
-				go func() {
-					defer wg.Done()
-					ToDoList.ViewTodoList(todoFile)
-				}()
-			case "2":
-				wg.Add(1)
-				go func() {
-					defer wg.Done()
-					ToDoList.AddTask(todoFile)
-				}()
-			case "3":
-				wg.Wait()
-				break
-			default:
-				fmt.Println("Invalid choice. Please try again.")
-			}
-			wg.Wait()
+			handleManualTodoList(username, todoFile)
 		case "2":
-			fmt.Println("1. View Daily Status")
-			fmt.Println("2. Mark Task as Completed")
-			fmt.Println("3. Go back")
-			fmt.Print("Enter your choice: ")
-			choice2, _ := reader.ReadString('\n')
-			choice2 = strings.TrimSpace(choice2)
-
-			var wg sync.WaitGroup
-
-			switch choice2 {
-			case "1":
-				wg.Add(1)
-				go func() {
-					defer wg.Done()
-					DailyStatus.ViewDailyStatus(statusFile)
-				}()
-			case "2":
-				wg.Add(1)
-				go func() {
-					defer wg.Done()
-					DailyStatus.MarkTaskAsCompleted(todoFile, statusFile)
-				}()
-			case "3":
-				wg.Wait() // Wait for any ongoing tasks to complete
-				break
-			default:
-				fmt.Println("Invalid choice. Please try again.")
-			}
-			wg.Wait()
+			handleDailyStatus(username, statusFile)
 		case "3":
 			CourseProgress.DisplayProgress(todoFile, statusFile)
+		case "4":
+			fmt.Println(green + "\n👋 Returning to main menu..." + reset)
+			return
+		default:
+			fmt.Println(red + "\n❌ Invalid choice. Please try again." + reset)
+		}
+	}
+}
+
+func handleManualTodoList(username, todoFile string) {
+	reader := bufio.NewReader(os.Stdin)
+
+	for {
+		fmt.Println(yellow + "\n📝 To-Do List Management:" + reset)
+		fmt.Println(cyan + "1. 👀 View To-Do List" + reset)
+		fmt.Println(cyan + "2. ➕ Add Task to To-Do List" + reset)
+		fmt.Println(cyan + "3. 🔙 Go Back" + reset)
+
+		fmt.Print(yellow + "\nPlease enter your choice (1-3): " + reset)
+		choice, _ := reader.ReadString('\n')
+		choice = strings.TrimSpace(choice)
+
+		switch choice {
+		case "1":
+			ToDoList.ViewTodoList(todoFile)
+		case "2":
+			ToDoList.AddTask(todoFile)
+		case "3":
+			fmt.Println(green + "\n👋 Returning to Task Management Menu..." + reset)
+			return
+		default:
+			fmt.Println(red + "\n❌ Invalid choice. Please try again." + reset)
+		}
+	}
+}
+
+func handleDailyStatus(username, statusFile string) {
+	todoFile := username + "_todo.txt"
+	reader := bufio.NewReader(os.Stdin)
+
+	for {
+		fmt.Println(yellow + "\n📊 Daily Status Management:" + reset)
+		fmt.Println(cyan + "1. 👀 View Daily Status" + reset)
+		fmt.Println(cyan + "2. ✅ Mark Task as Completed" + reset)
+		fmt.Println(cyan + "3. 🔙 Go Back" + reset)
+
+		fmt.Print(yellow + "\nPlease enter your choice (1-3): " + reset)
+		choice, _ := reader.ReadString('\n')
+		choice = strings.TrimSpace(choice)
+
+		switch choice {
+		case "1":
+			DailyStatus.ViewDailyStatus(statusFile)
+		case "2":
+			DailyStatus.MarkTaskAsCompleted(todoFile, username)
+		case "3":
+			fmt.Println(green + "\n👋 Returning to Task Management Menu..." + reset)
+			return
+		default:
+			fmt.Println(red + "\n❌ Invalid choice. Please try again." + reset)
 		}
 	}
 }

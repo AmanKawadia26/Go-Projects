@@ -1,0 +1,12 @@
+Modules:
+Module 1: Introduction to the Course
+Module 2: Basics
+Module 3: Intermediate Concepts
+Module 4: Advanced Topics
+Module 5: Expert Techniques
+Module 6: Practical Applications
+Module 7: Case Studies
+Module 8: Future Trends
+Module 9: Final Project
+Module 10: Course Review
+Completed: Module 9: Final Project

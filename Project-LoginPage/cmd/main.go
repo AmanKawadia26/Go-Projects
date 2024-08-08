@@ -12,21 +12,27 @@ import (
 )
 
 func main() {
+	// ANSI escape codes
+	const (
+		reset  = "\033[0m"
+		cyan   = "\033[36m"
+		yellow = "\033[33m"
+		red    = "\033[31m"
+		green  = "\033[32m"
+	)
 
+	// Open the user file
 	f, err := os.OpenFile("user.txt", os.O_RDWR|os.O_CREATE, 0666)
 	if err != nil {
-
 		panic(err)
 	}
 	defer f.Close()
-	scanner := bufio.NewScanner(f)
-	//fmt.Println(scanner)
 
+	// Read existing users from the file
+	scanner := bufio.NewScanner(f)
 	for scanner.Scan() {
 		line := scanner.Text()
-		//fmt.Println(line)
 		parts := strings.Split(line, ":")
-		//fmt.Println(parts)
 		if len(parts) == 2 {
 			user := models.Users{
 				Username: parts[0],
@@ -35,16 +41,24 @@ func main() {
 			config.Users = append(config.Users, user)
 		}
 	}
-	//fmt.Println(users)
+
+	// Welcome banner
 
 	for {
+
+		fmt.Println(yellow + "===================================" + reset)
+		fmt.Println(yellow + "🌟 Welcome to the Login Page 🌟" + reset)
+		fmt.Println(yellow + "===================================" + reset)
+
 		if !auth.Verification() {
-			fmt.Println("Verification Failed! Can't Login or SignUp.")
+			fmt.Println(red + "❌ Verification Failed! Can't Login or SignUp." + reset)
 			return
 		}
-		fmt.Println("\nSelect an option: ")
-		fmt.Println("1. Login")
-		fmt.Println("2. Signup")
+
+		// Main menu
+		fmt.Println("\n" + cyan + "Select an option:" + reset)
+		fmt.Println(cyan + "1. 🕵️‍♂️ Login" + reset)
+		fmt.Println(cyan + "2. 📝 Signup" + reset)
 
 		var choice int
 		fmt.Scan(&choice)
@@ -55,7 +69,7 @@ func main() {
 		case 2:
 			ui.SignUp(f)
 		default:
-			fmt.Println("Invalid option")
+			fmt.Println(red + "Invalid option. Please choose 1 or 2." + reset)
 			return
 		}
 	}

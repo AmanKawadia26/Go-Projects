@@ -6,18 +6,25 @@
   <component name="ChangeListManager">
     <list default="true" id="0892d45d-ee85-433d-a5f4-b26a7e1d20b0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/aman_status.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/aman_status.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/aman_todo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/aman_todo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/aman_status.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/aman_todo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/anand_status.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/anand_todo.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Project-LoginPage/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/cmd/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project-LoginPage/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/auth/Verification.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/auth/Verification.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/auth/CredInput.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/auth/CredInput.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/models/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/models/models.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/ui/Login.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/ui/Login.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/ui/SignUp.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/ui/SignUp.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/ui/ToDoList.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/ui/ToDoList.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/utils/SignUp.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/ui/SignUp.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/utils/addTask.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/utils/ToDoList/addTask.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/utils/markTaskAsCompleted.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/utils/DailyStatus/markTaskAsCompleted.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/utils/viewDailyStatus.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/utils/DailyStatus/viewDailyStatus.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/utils/viewTodoList.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/utils/ToDoList/viewTodoList.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/utils/CourseProgress/DIsplayProgress.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/utils/CourseProgress/DIsplayProgress.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/utils/DailyStatus/markTaskAsCompleted.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/utils/DailyStatus/markTaskAsCompleted.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/utils/DailyStatus/viewDailyStatus.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/utils/DailyStatus/viewDailyStatus.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/utils/ToDoList/addTask.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/utils/ToDoList/addTask.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/utils/ToDoList/viewTodoList.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/utils/ToDoList/viewTodoList.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/pravin_status.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/pravin_todo.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Project-LoginPage/user.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/user.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,33 +43,33 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2kElJtmTcxLaGka4mqQQooDRgSu" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "Go Build.go build LoginPage/Project-LoginPage/cmd.executor": "Run",
-    "Go Build.go build LoginPage/cmd.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "git-widget-placeholder": "main",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "C:/Users/akawadia/Downloads/Go-Projects/Project-LoginPage/internal",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;Go Build.go build LoginPage/Project-LoginPage/cmd.executor&quot;: &quot;Run&quot;,
+    &quot;Go Build.go build LoginPage/cmd.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.automatic.dependencies.download&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/akawadia/Downloads/Go-Projects/Project-LoginPage/internal&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\akawadia\Downloads\Go-Projects\Project-LoginPage\internal" />

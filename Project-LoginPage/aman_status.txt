@@ -1,3 +1,0 @@
-Completed: course completion
-Completed: introduction to go
-Completed: Functions

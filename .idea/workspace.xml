@@ -6,26 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0892d45d-ee85-433d-a5f4-b26a7e1d20b0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/aman_status.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/aman_todo.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/anand_status.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/anand_todo.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Project-LoginPage/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/cmd/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/auth/CredInput.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/auth/CredInput.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/models/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/models/models.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/ui/Login.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/ui/Login.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/auth/passwordValidator.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/auth/passwordValidator.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/ui/Course.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/ui/Course.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/ui/SignUp.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/ui/SignUp.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/ui/ToDoList.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/ui/ToDoList.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/utils/CourseProgress/DIsplayProgress.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/utils/CourseProgress/DIsplayProgress.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/utils/DailyStatus/markTaskAsCompleted.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/utils/DailyStatus/markTaskAsCompleted.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/utils/DailyStatus/viewDailyStatus.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/utils/DailyStatus/viewDailyStatus.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/utils/ToDoList/addTask.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/utils/ToDoList/addTask.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/internal/utils/ToDoList/viewTodoList.go" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/internal/utils/ToDoList/viewTodoList.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/pravin_status.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/pravin_todo.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-LoginPage/user.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project-LoginPage/user.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +40,7 @@
     &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
     &quot;Go Build.go build LoginPage/Project-LoginPage/cmd.executor&quot;: &quot;Run&quot;,
     &quot;Go Build.go build LoginPage/cmd.executor&quot;: &quot;Run&quot;,
+    &quot;Go Test.go test LoginPage/internal/utils/ToDoList.executor&quot;: &quot;Coverage&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
@@ -64,7 +49,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
     &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/akawadia/Downloads/Go-Projects/Project-LoginPage/internal&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/GoCodes&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
@@ -101,9 +86,21 @@
       <filePath value="$PROJECT_DIR$/Project-LoginPage/cmd/main.go" />
       <method v="2" />
     </configuration>
+    <configuration name="go test LoginPage/internal/utils/ToDoList" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="Go-Projects" />
+      <working_directory value="$PROJECT_DIR$/Project-LoginPage/internal/utils/ToDoList" />
+      <root_directory value="$PROJECT_DIR$/Project-LoginPage" />
+      <kind value="PACKAGE" />
+      <package value="LoginPage/internal/utils/ToDoList" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Go Build.go build LoginPage/cmd" />
+        <item itemvalue="Go Test.go test LoginPage/internal/utils/ToDoList" />
         <item itemvalue="Go Build.go build LoginPage/Project-LoginPage/cmd" />
       </list>
     </recent_temporary>
@@ -122,5 +119,8 @@
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Go_Projects$go_test_LoginPage_internal_utils_ToDoList.out" NAME="go test LoginPage/internal/utils/ToDoList Coverage Results" MODIFIED="1723095065221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

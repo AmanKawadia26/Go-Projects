@@ -35,6 +35,5 @@ func IsStrongPassword(password string) bool {
 		}
 	}
 
-	// If all checks pass
 	return true
 }

@@ -198,7 +198,7 @@ func checkCourseProgress(courseFileName string) {
 
 	totalModules := len(modules)
 	if totalModules == 0 {
-		totalModules = 10 // Default total modules if the file is empty
+		totalModules = 10
 	}
 	completedCount := 0
 

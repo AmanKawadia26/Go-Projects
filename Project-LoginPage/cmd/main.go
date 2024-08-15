@@ -12,7 +12,6 @@ import (
 )
 
 func main() {
-	// ANSI escape codes
 	const (
 		reset  = "\033[0m"
 		cyan   = "\033[36m"
@@ -28,7 +27,6 @@ func main() {
 	}
 	defer f.Close()
 
-	// Read existing users from the file
 	scanner := bufio.NewScanner(f)
 	for scanner.Scan() {
 		line := scanner.Text()
@@ -41,8 +39,6 @@ func main() {
 			config.Users = append(config.Users, user)
 		}
 	}
-
-	// Welcome banner
 
 	for {
 

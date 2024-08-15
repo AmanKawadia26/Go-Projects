@@ -23,7 +23,6 @@ func SignUp(f io.Writer) {
 	fmt.Println(cyan + "\n🚀 Welcome to the Sign Up Process! 🚀" + reset)
 	fmt.Println(yellow + "Let's get you set up with a new account." + reset)
 
-	// Get username and password
 	for {
 		user.Username, user.Password = auth.CredInput()
 		if !auth.IsStrongPassword(user.Password) {
@@ -39,7 +38,6 @@ func SignUp(f io.Writer) {
 		}
 	}
 
-	// Get first name
 	for {
 		fmt.Print(yellow + "\nEnter your first name: " + reset)
 		user.FirstName, _ = reader.ReadString('\n')
@@ -50,7 +48,6 @@ func SignUp(f io.Writer) {
 		fmt.Println(red + "❌ Invalid first name. Please use only letters and avoid spaces." + reset)
 	}
 
-	// Get last name
 	for {
 		fmt.Print(yellow + "\nEnter your last name: " + reset)
 		user.LastName, _ = reader.ReadString('\n')
@@ -61,7 +58,6 @@ func SignUp(f io.Writer) {
 		fmt.Println(red + "❌ Invalid last name. Please use only letters and avoid spaces." + reset)
 	}
 
-	// Get age
 	for {
 		fmt.Print(yellow + "\nEnter your age: " + reset)
 		ageStr, _ := reader.ReadString('\n')
@@ -73,7 +69,6 @@ func SignUp(f io.Writer) {
 		fmt.Println(red + "❌ Invalid age. Please enter a number between 1 and 150." + reset)
 	}
 
-	// Get mobile number
 	for {
 		fmt.Print(yellow + "\nEnter your mobile number (10 digits): " + reset)
 		user.MobileNo, _ = reader.ReadString('\n')
